@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="books_info" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="132"/>
+	<queryString language="SQL">
+		<![CDATA[select * from books_info order by Book_Code]]>
+	</queryString>
+	<field name="Book_Name" class="java.lang.String"/>
+	<field name="Author_Name" class="java.lang.String"/>
+	<field name="Book_Code" class="java.lang.String"/>
+	<field name="ISBN" class="java.lang.String"/>
+	<field name="Edition" class="java.lang.String"/>
+	<field name="Published_Year" class="java.lang.String"/>
+	<field name="Publish_Country" class="java.lang.String"/>
+	<field name="Language" class="java.lang.String"/>
+	<field name="Department" class="java.lang.String"/>
+	<field name="Quantity" class="java.lang.String"/>
+	<field name="Price" class="java.lang.String"/>
+	<title>
+		<band height="160" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="2" width="802" height="157"/>
+				<imageExpression class="java.lang.String"><![CDATA["report\\book.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="801" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Impact" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Books information]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="702" y="45" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="65" width="799" height="2"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32">
+			<staticText>
+				<reportElement x="0" y="0" width="119" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Book name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="0" width="129" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Author name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="0" width="66" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Book code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="0" width="67" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ISBN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="0" width="51" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edition]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="619" y="0" width="95" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="714" y="0" width="46" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="760" y="0" width="42" height="32"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="563" y="0" width="56" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Language]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="0" width="79" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Publishing Country]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="0" width="52" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Published year]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="70" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="2" width="118" height="33"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Book_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="2" width="129" height="33"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Author_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="2" width="67" height="33"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Book_Code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="2" width="66" height="33"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ISBN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="2" width="51" height="33"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Edition}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="2" width="51" height="33"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Published_Year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="2" width="80" height="33"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Publish_Country}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="564" y="2" width="57" height="33"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Language}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="621" y="2" width="93" height="33"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="713" y="2" width="47" height="33"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="760" y="2" width="42" height="33"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Price}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="54" width="801" height="1"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="680" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="760" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="94">
+			<staticText>
+				<reportElement x="1" y="52" width="801" height="42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[The End]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="802" height="42"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[N.B: Not transferable without permission.]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+</jasperReport>

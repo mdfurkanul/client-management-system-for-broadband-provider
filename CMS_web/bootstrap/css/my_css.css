@@ -1,0 +1,9 @@
+.boun{
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+.admin{
+background-image: url("img/admin.png");
+}

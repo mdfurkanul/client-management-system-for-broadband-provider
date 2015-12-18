@@ -1,0 +1,54 @@
+#profile{
+background-color:#74BAD5;
+padding: 20px;
+}
+.inner_profile:hover { 
+color:#74BAD5;
+border: solid 1px #fffff;
+ background-color:#333;
+ box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+ -moz-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+ -webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+ -o-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+}
+#vision{
+background-color: #2F8498;
+padding: 30px;
+}
+.inner_vision:hover { 
+color:#ffffff;
+border: solid 1px #fffff;
+ background-color:#00000;
+ box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+ -moz-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+ -webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+ -o-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+}
+#mission{
+background-color: #5BC0DE;
+padding: 30px;
+}
+.inner_mission:hover { 
+color:#333;
+border: solid 1px #00000;
+ background-color:#74BAD5;
+ box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+ -moz-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+ -webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+ -o-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+}
+#packages{
+background-color:#AAAAAA;
+padding: 30px;
+}
+#contact{
+background-color:#39cccc;
+padding: 30px;
+}
+#loginp{
+background-color:#00000;
+}
+#a_big:hover{
+font-size:18px;
+color:#0000;
+}
